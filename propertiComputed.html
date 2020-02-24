@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css">
+		.title{
+			color: green;
+		
+		}
+		</style>
+		<div id="app">
+			{{fullname}}
+			</div>
+		<script type="text/javascript">
+
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					nama: "Mita Nurul Yatimah",
+					nim: "1710130008"
+				},
+			computed: {
+				fullname: function(){
+					return this.nama + ' ' + this.nim
+				}
+			
+			}
+		})
+		</script>
+	</body>
+</html>

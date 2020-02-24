@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css"></style>
+		<div id="app">
+			<button v-on:click="counter += 1">
+			<p>butto diatas telah diklik sebanyak {{counter}} kali.</p>
+		</div>
+		<script type="text/javascript">
+			var example1 = new Vue({
+				el: '#app',
+				data: {
+					counter:0
+				}
+				
+			
+		})
+		</script>
+	</body>
+</html>

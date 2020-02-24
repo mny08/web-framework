@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css">
+		.title{
+			color: green;
+		
+		}
+		</style>
+		<div id="app">
+			<h1> upper: {{message | upper}}</h1>
+			<h1> reverse: {{message | reverse}}</h1>
+			<h1> upper & reverse: {{message | upper | reverse}}</h1></div>
+		<script type="text/javascript">
+
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					message: "Mita Nurul Yatimah",
+					
+				},
+			filters: {
+				upper (text){
+					return text.split('').reverse().join('')
+				}
+			
+			}
+		})
+		</script>
+	</body>
+</html>

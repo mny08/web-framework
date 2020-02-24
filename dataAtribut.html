@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css">
+		.title{
+			color: green;
+		
+		}
+		</style>
+		<div id="app">
+			<h1 v-bind:class="class_h1">{{ message}}</h1>
+		</div>
+		<script type="text/javascript">
+			Vue.config.silent = true
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					message: "Mita Nurul Yatimah",
+					class_h1: "title"
+				},
+			
+		})
+		</script>
+	</body>
+</html>

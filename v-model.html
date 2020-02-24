@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css"></style>
+		<div id="app">
+			<form>
+				<input type="text" name="title" v-model="title" placeholder="masukan judul"/>
+				isi disini yaa
+				<br><br>
+				<textarea name="description"
+				placeholder="masukan deskripsi"</textarea>
+				{{ description}}
+			</form>
+		</div>
+		<script type="text/javascript">
+			var example1 = new Vue({
+				el: '#app',
+				data: {
+					title:  "",
+					description: ""
+				},
+				
+			
+		})
+		</script>
+	</body>
+</html>

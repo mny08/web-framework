@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{ message}},{{ nama}},{{ gender}}, {{NIM}}, {{semester}}, {{matakuliah}}</h1>
+		</div>
+		<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				message: 'biodata',
+				nama: 'Mita Nurul',
+				gender: 'Perempuan',
+				NIM : '171013008',
+				semester: 6,
+				matakuliah: {
+					1: 'manajement proyek',
+					2: 'data mining',
+					3: 'Citra Digital'
+				
+				}
+			
+			}
+		
+		})
+		</script>
+	</body>
+</html>

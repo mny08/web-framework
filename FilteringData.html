@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css"></style>
+		<div id="app">
+			<input type="text" v-model="keyword" placeholder="ketikan kata kunci">
+			<ul>
+				<li v-for="(book, index) of filterBooks" :key="index">
+				{{ book }}
+			</ul>
+		
+		</div>
+		<script type="text/javascript">
+			
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					keyword: '',
+					books : [
+						'Manajemnt proyek',
+						'web framework',
+						'matematika'
+						]
+				},
+				computed:{
+					filterBooks(){
+						return this.books.filter((book)=>{
+							return book.includes(this.keyword)
+						
+						
+						
+						})
+					
+					}
+				
+				}
+			
+		})
+		</script>
+	</body>
+</html>

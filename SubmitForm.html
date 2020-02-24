@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Belajar Vue</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		
+	</head>
+	<body>
+		<style type="text/css"></style>
+		<div id="app">
+			<form @submit="submitForm($event)" action="http"//example.com/add=product"
+			methods="post">
+				<label>Title:</label>
+				<input type="text">
+		</div>
+		<script type="text/javascript">
+			
+			var vm = new Vue({
+				el: '#app',
+				data:{ 
+				title: '',
+					description: '',
+					authors: '',
+					price: '',
+					categories: [],
+					options: [
+					{text: 'Graphical programing', value: '10'},
+					{text: 'moblie apllication development', value: '02'},
+					{text: 'virtual and augmentea reality', value:'44'}
+					
+					]
+					},
+					methods: {
+						submitForm(event){
+							console.log(event)
+							alert('terimakasih')
+							event.preventDefault()
+						
+						
+						}
+					
+					}
+			
+		})
+		</script>
+	</body>
+</html>

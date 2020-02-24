@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<h1>Biodata</h1>
+			<p>Nama Lengkap: {{ pesan }}</p>
+		<input v-model="pesan" placeholder="nama lengkap">
+		<br>
+		<br>
+	
+		<select v-model="selected">
+		  <option disabled value="">Semester</option>
+		  <option>1</option>
+		  <option>2</option>
+		  <option>3</option>
+		   <option>4</option>
+		  <option>5</option>
+		  <option>6</option>
+		   <option>7</option>
+		  <option>8</option>
+		 
+		</select>
+		<span>Semester : {{ selected }}</span>
+		<p>prodi: {{ pilih }}</p>
+		<input type="radio" id="vuejs" v-model="pilih" value="Computer Science"><span>Computer Science</span>
+		<br>
+		<input type="radio" id="javascript" v-model="pilih" value="Sistem Informasi"><span>Sistem Informasi</span>
+		<br>
+		<input type="radio" id="javascript" v-model="pilih" value="Managemnt Bisnis"><span>Managemnt Bisnis</span>
+		<br>
+		<div id='example-3'>
+		<br>
+		<span>Matakuliah yang diambil : {{ check }}</span>
+		<br>
+			<input type="checkbox" id="Managemet proyek" value="Managemet proyek" v-model="check">
+			  <label for="Managemet proyek">Managemet proyek</label>
+			  <input type="checkbox" id="Web Framework" value="Web Framework" v-model="check">
+			  <label for="Web Framework">Web Framework</label>
+			  <input type="checkbox" id="Citra Digital" value="Citra Digital" v-model="check">
+			  <label for="Citra Digital">Citra Digital</label>
+			  <br>
+			  
+		</div>
+		<br>
+		<span>  beasiswa</span>
+		<input type="checkbox" id="checkbox" v-model="checked">
+		<label for="checkbox">{{ checked }}</label>
+		
+		
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				pilih: '',
+				selected: '',
+				check: [],
+				pesan: ''
+			}
+		});
+		
+	</script>
+</body>
+</html>
